@@ -18,6 +18,10 @@ val flywheelVersion = property("flywheel_version") as String
 val registrateVersion = property("registrate_version") as String
 val chemlibVersion = property("chemlib_version") as String
 val chemlibCurseFileId = property("chemlib_curse_file_id") as String
+val alchemylibVersion = property("alchemylib_version") as String
+val alchemylibCurseFileId = property("alchemylib_curse_file_id") as String
+val alchemistryVersion = property("alchemistry_version") as String
+val alchemistryCurseFileId = property("alchemistry_curse_file_id") as String
 val createNewAgeVersion = property("create_new_age_version") as String
 val createNewAgeCurseFileId = property("create_new_age_curse_file_id") as String
 val emiVersion = property("emi_version") as String
@@ -117,6 +121,8 @@ dependencies {
     implementation(deobf("com.tterrag.registrate:Registrate:$registrateVersion"))
 
     implementation(deobf("curse.maven:chemlib-340666:$chemlibCurseFileId"))
+    implementation(deobf("curse.maven:alchemylib-293426:$alchemylibCurseFileId"))
+    implementation(deobf("curse.maven:alchemistry-293425:$alchemistryCurseFileId"))
     implementation(deobf("curse.maven:create-new-age-905861:$createNewAgeCurseFileId"))
     compileOnly(deobf("curse.maven:emi-580555:$emiCurseFileId"))
     runtimeOnly(deobf("curse.maven:emi-580555:$emiCurseFileId"))
@@ -133,6 +139,8 @@ tasks.processResources {
         "createReleaseVersion" to createReleaseVersion,
         "createNewAgeVersion" to createNewAgeVersion,
         "chemlibVersion" to chemlibVersion,
+        "alchemylibVersion" to alchemylibVersion,
+        "alchemistryVersion" to alchemistryVersion,
         "emiVersion" to emiVersion,
         "modId" to modId,
         "modName" to modName,

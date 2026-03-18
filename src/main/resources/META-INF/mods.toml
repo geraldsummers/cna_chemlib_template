@@ -55,9 +55,22 @@ ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${modId}]]
+modId="alchemylib"
+mandatory=true
+versionRange="[${alchemylibVersion},)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${modId}]]
+modId="alchemistry"
+mandatory=true
+versionRange="[${alchemistryVersion},)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${modId}]]
 modId="emi"
 mandatory=false
 versionRange="[${emiVersion},)"
 ordering="AFTER"
 side="CLIENT"
-
